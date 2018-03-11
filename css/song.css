@@ -6,12 +6,29 @@
   100% {transform: rotate(360deg); } 
 }
 
-.page{display: flex; flex-direction: column; height: 100vh;
-	-webkit-backdrop-filter: blur(5px);
-	background: transparent url(http://p3.music.126.net/z4p2xss2a50qNHe6TLFdoA==/2425522650910827.jpg) no-repeat center;
-	background-size: cover;
+.page{display: flex; flex-direction: column; height: 100vh;position: absolute;top: 0;left: 0;
 }
-
+.backCover{
+	height: 100%;
+	width: 100%;
+	filter: blur(5px);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.backCoverWrapper{
+	z-index: -1;
+	height: 100vh;
+	width: 100%;
+	padding: 10vh;
+	overflow: hidden;
+}
+span.logo{
+	background-image: url(//s3.music.126.net/m/s/img/logo_3x.png?d79ce509c143e0f745d972d8804b242a);
+}
 .disc-container{position: relative; z-index:1;}
 .disc-container .icon-wrapper{position: absolute; z-index: 1; display: flex; 
 	justify-content: center; align-items: center;

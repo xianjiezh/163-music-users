@@ -40,14 +40,15 @@
                 let imgLink = song.attributes.imgLink
                 let lyrics = song.attributes.lyrics
                 let o = { id, songName, singer, link, imgLink, lyrics }
-                this.beforePlay(o.link)
+                this.beforePlay(link, imgLink)
                 this.view.render(imgLink)
                 this.playing()
                 this.bindEvents()
             })
         },
-        beforePlay(src) {
-            this.audio.src = src
+        beforePlay(link, imgLink) {
+            this.audio.src = link
+            document.querySelector('.backCover').style['background-image'] = `url(${imgLink})`
         },
         playing() {
             this.audio.play()

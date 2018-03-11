@@ -20,7 +20,6 @@
             return t
         },
         render(song){
-            log(this.el)
             this.el.insertAdjacentHTML('beforeend', this.template(song))
         }
     }

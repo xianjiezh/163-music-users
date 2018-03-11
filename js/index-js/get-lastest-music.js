@@ -38,7 +38,6 @@
             })
         },
         bindEventHub() {
-            log(this.model.songs)
             window.eventHub.emit('gotSongs', this.model.songs)
         },
 

@@ -40,6 +40,7 @@
                 let imgLink = song.attributes.imgLink
                 let lyrics = song.attributes.lyrics
                 let o = { id, songName, singer, link, imgLink, lyrics }
+                window.eventHub.emit('playing', o)
                 this.beforePlay(link, imgLink)
                 this.view.render(imgLink)
                 this.playing()

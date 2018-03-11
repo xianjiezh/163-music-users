@@ -9,6 +9,11 @@ html{
 body{
 	font-size: 3.7vw;
 }
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+}
 
 section>h2:first-child{
 	font-size: 4.53vw;
@@ -21,7 +26,7 @@ section>h2:first-child{
 
 .topbar{background: #D43C33; padding: 4.5vw 2.5vw; display: flex; align-items: center; justify-content: space-between; }
 .topbar .logo{width: 38vw; }
-.topbar .downloadApp{line-height: 7.5vw; border: 1px solid white; border-radius: 4.25vw; display: block; color: white; text-decoration: none; padding: 0 .5em; }
+.topbar .downloadApp{line-height: 7.5vw; border: 1px solid #e27d77; border-radius: 4.25vw; display: block; color: white; text-decoration: none; padding: 0 .6em; }
 
 .siteNav{}
 .siteNav > ol{display: flex; text-align: center; border-bottom: 1px solid #CCCCCC; font-size: 1.1em; }
@@ -60,7 +65,7 @@ section>h2:first-child{
 	text-overflow: ellipsis;
 }
 
-.lastestMusic{}
+
 .lastestMusic > p{
 	text-align: center;
 }
@@ -132,4 +137,32 @@ section.art .copyright{
 	transform: scale(.75);
 	text-align: center;
 	color: #888;
+}
+
+div.songWrapper{
+	float: left;
+}
+span.sq{
+	display: inline-block;
+	width: 3.2vw;
+	height: 2.2vw;
+	background-image: url(./images/index_icon_3x.png);
+	background-size: 166px 97px; 
+}
+span.singer{
+    font-size: 3.3vw;
+	color: #888;
+	font-family: Helvetica, sans-serif;
+}
+div.songName{
+	font-size: 4.3vw;
+	font-family: Helvetica, sans-serif;
+}
+div.playButton{
+	float: right;
+	background-image: url(./images/index_icon_3x.png);
+	background-size: 166px 97px; 
+	width: 10vw;
+	height: 10vw;
+	background-position: -48vw 29vw;
 }
